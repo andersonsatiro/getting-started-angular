@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/functions.scss';
+
+header {
+  @include FlexCenter(center, 1rem);
+  flex-direction: column;
+  padding: 12rem 1rem 8rem 1rem;
+  background-color: $white;
+
+  h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #C41740, #EA9C28);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+  p{
+    font-size: 1.4rem;
+    color: $gray-100;
+    text-align: center;
+    line-height: 2.4rem;
+    max-width: 50%;
+  }
+}

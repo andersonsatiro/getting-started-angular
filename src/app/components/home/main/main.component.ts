@@ -8,6 +8,4 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

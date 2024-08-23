@@ -1,17 +1,17 @@
 <div class="card">
-  <img src="/imagens/my-stack.webp" alt="imagem de um código de programação">
+  <img src={{imagePath}} alt="imagem de um código de programação">
 
-  <div>
-    <p>fácil</p>
+  <div class="concepts-list">
+    <p *ngFor="let concept of conceptsLearned">
+      {{concept}}
+    </p>
   </div>
 
-  <div>
-    <h3>The Impact of Technology on the Workplace: How Technology is Changing</h3>
-  </div>
+  <h3>{{mainText}}</h3>
 
   <footer>
-    <img src="" alt="">
-    <p>Anderson Paiva</p>
-    <p>August 20, 2024</p>
+    <img src="https://github.com/andersonsatiro.png" alt="s">
+    <span>Anderson Paiva</span>
+    <time>{{creationDate}}</time>
   </footer>
 </div>

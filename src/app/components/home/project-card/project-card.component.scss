@@ -13,6 +13,51 @@
     border-radius: .6rem;
   }
 
+  .concepts-list {
+    @include FlexCenter(center, 1rem);
+    width: 100%;
+    flex-wrap: wrap;
+
+    p {
+      font-size: 1.4rem;
+      padding: .4rem 1rem;
+      border-radius: .6rem;
+      font-weight: 500;
+    }
+
+    p:nth-child(odd){
+      background-color: $orange-50;
+      color: $orange-100;
+    }
+
+    p:nth-child(even){
+      background-color: $purple-50;
+      color: $purple-100;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $gray-900;
+  }
+
+  footer {
+    @include FlexCenter(start, 1.2rem);
+    width: 100%;
+
+    img {
+      width: 3.6rem;
+      border-radius: 100%;
+    }
+
+    span, time {
+      font-size: 1.2rem;
+      color: $gray-50;
+      font-weight: 500;
+    }
+  }
+
   &:hover {
     cursor: pointer;
   }

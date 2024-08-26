@@ -1,0 +1,28 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/functions.scss';
+
+section {
+  @include FlexCenter(start, 3.6rem);
+  flex-direction: column;
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $gray-900;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    app-tech-card:nth-child(odd){
+      background-color: $green-50;
+    }
+  
+    app-tech-card:nth-child(even){
+      background-color: $orange-50;
+    }
+  }
+}

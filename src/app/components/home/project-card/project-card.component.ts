@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -10,6 +10,10 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ProjectCardComponent {
+  @Input({
+    required: true
+  }) cardName!: string
+
   @Input({
     required: true
   }) imagePath!: string
@@ -25,4 +29,10 @@ export class ProjectCardComponent {
   @Input({
     required: true
   }) creationDate!: string
+
+  @Output() detailCard = new EventEmitter<string>()
+
+  handlingButtonClick(){
+    this.detailCard.emit(this.cardName)
+  }
 }

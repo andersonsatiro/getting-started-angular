@@ -1,0 +1,30 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/functions.scss';
+
+.tech-card {
+  @include FlexCenter(center, 2rem);
+  flex-direction: column;
+  padding: 3rem 2.5rem;
+  border-radius: .8rem;
+  
+  img {
+    width: 10rem;
+  }
+
+  div {
+    @include FlexCenter(center, 0rem);
+    flex-direction: column;
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $gray-900;
+    }
+  
+    p {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $gray-50;
+    }
+  }
+}

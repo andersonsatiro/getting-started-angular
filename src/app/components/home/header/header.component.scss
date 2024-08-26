@@ -10,7 +10,7 @@ header {
   h1 {
     font-size: 6rem;
     font-weight: bold;
-    background-image: linear-gradient(to left, #C41740, #EA9C28);
+    background-image: linear-gradient(to left, $red-200, $yellow-200);
     background-clip: text;
     -webkit-text-fill-color: transparent; 
   }

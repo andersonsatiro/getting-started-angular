@@ -1,33 +1,35 @@
-<main>
+<div class="main" *ngIf="contentShown === 'default'; else openCard">
   <app-project-card
-    imagePath="/imagens/my-stack.webp"
-    [conceptsLearned]="['input', 'input required']"
+    cardName="stack"
+    imagePath="/images/my-stack.webp"
+    [conceptsLearned]="['input', 'input required', 'output']"
     mainText="Todas as tecnologias que já estudei e coloquei em prática"
-    [creationDate]="August 20, 2024"
+    creationDate="August 20, 2024"
+    (detailCard)="cardClicked($event)"
   >
   </app-project-card> 
-
+  
   <app-project-card
-    imagePath="/imagens/my-stack.webp"
+    cardName="product list"
+    imagePath="/images/supermarket.jpeg"
     [conceptsLearned]="['input', 'input required']"
     mainText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo maxime, sapiente nesciunt recusandae minima repellat. "
-    [creationDate]="August 20, 2024"
+    creationDate="August 20, 2024"
+    (detailCard)="cardClicked($event)"
   >
   </app-project-card>
+</div>
 
-  <app-project-card
-    imagePath="/imagens/my-stack.webp"
-    [conceptsLearned]="['input', 'input required']"
-    mainText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo maxime, sapiente nesciunt recusandae minima repellat. "
-    [creationDate]="August 20, 2024"
-  >
-  </app-project-card>
+<ng-template #openCard>
+  <div class="open-card">
+    
+    <app-main-stack *ngIf="contentShown === 'stack'"></app-main-stack>
 
-  <app-project-card
-    imagePath="/imagens/my-stack.webp"
-    [conceptsLearned]="['input', 'input required']"
-    mainText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo maxime, sapiente nesciunt recusandae minima repellat. "
-    [creationDate]="August 20, 2024"
-  >
-  </app-project-card>
-</main>
+    <button
+      class="btn-return-to-default"
+      (click)="returnToDefaultContent()"
+    > Voltar para página inicial
+    </button>
+
+  </div>
+</ng-template>

@@ -39,3 +39,7 @@ servirá como uma referência prática e visual de como utilizar as principais f
         - alias: define um nome alternativo para a propriedade de entrada que será usada no templete.
 
 # Outpus
+-
+
+# Services
+- https://fakestoreapi.com/products

@@ -1,0 +1,33 @@
+<section>
+  <header>
+    <h3>Setores do supermercado</h3>
+
+    <select #selected name="supermarket-sectors" (change)="0">
+      <option value="selecione" hidden>Selecione um setor</option>
+      <option value="vegetais" selected>vegetais</option>
+      <option value="frutas">frutas</option>
+      <option value="bebidas">bebidas</option>
+    </select>
+  </header>
+
+  <ul>
+    <li *ngFor="let product of sectorProducts(selected.value)">
+      <img src="{{ product.imagePath }}" alt="imagem de {{ product.name }}">
+
+      <div class="product-description">
+        <p>{{ product.sector }}</p>
+        <h4>{{ product.name }}</h4>
+
+        <div class="product-evaluation">
+          <img src="/images/star.png" alt="imagem de uma estrela de avaliação do produto">
+          <span>{{ product.evaluation }} / 5</span>
+        </div>
+
+        <div class="product-price">
+          <h5>R$ {{ product.price }}</h5>
+          <h6>R$ 5.90</h6>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

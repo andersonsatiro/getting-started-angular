@@ -4,7 +4,7 @@
     imagePath="/images/my-stack.webp"
     [conceptsLearned]="['input', 'input required', 'output']"
     mainText="Todas as tecnologias que já estudei e coloquei em prática"
-    creationDate="August 20, 2024"
+    creationDate="August 25, 2024"
     (detailCard)="cardClicked($event)"
   >
   </app-project-card> 
@@ -12,9 +12,19 @@
   <app-project-card
     cardName="supermarket-sectors"
     imagePath="/images/supermarket.jpeg"
-    [conceptsLearned]="['data binding', 'property binding']"
+    [conceptsLearned]="['data binding', 'interpolação', 'event binding']"
     mainText="Exibição dos produtos de um supermercado de acordo com o seu setor"
-    creationDate="August 20, 2024"
+    creationDate="August 28, 2024"
+    (detailCard)="cardClicked($event)"
+  >
+  </app-project-card>
+
+  <app-project-card
+    cardName="user-profile"
+    imagePath="/images/user-profile.jpg"
+    [conceptsLearned]="['two-way data binding']"
+    mainText="Perfil do usuário dinâmico, podendo alterar os dados exibidos instantaneamente"
+    creationDate="August 29, 2024"
     (detailCard)="cardClicked($event)"
   >
   </app-project-card>
@@ -25,6 +35,7 @@
     
     <app-main-stack *ngIf="contentShown === 'stack'"></app-main-stack>
     <app-supermarket-sectors *ngIf="contentShown === 'supermarket-sectors'"></app-supermarket-sectors>
+    <app-user-profile *ngIf="contentShown === 'user-profile'"></app-user-profile>
 
     <button
       class="btn-return-to-default"

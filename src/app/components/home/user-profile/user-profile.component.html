@@ -1,0 +1,110 @@
+<section>
+  <div class="side-forms">
+    <img src="/images/instagram.png" alt="Logo do Instagram">
+
+    <form>
+      <div>
+        <label for="username">Nome do usuário</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          [(ngModel)]="username"
+        >
+      </div>
+
+      <div>
+        <label for="username">Selecione uma foto</label>
+        <select name="photo" id="photo" [(ngModel)]="imagePath">
+          <option value="albert" selected>Albert</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="name">Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          [(ngModel)]="name"
+        >
+      </div>
+      
+      <div>
+        <label for="description">Descrição do perfil</label>
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="description"
+          rows="10"
+          (input)="handleTextareaSize('description')"
+          (load)="handleTextareaSize('description')"
+        >
+        </textarea>
+      </div>
+
+      <div>
+        <label for="link">Link</label>
+        <input
+          type="url"
+          name="link"
+          id="link"
+          [(ngModel)]="site"
+        >
+      </div>
+
+    </form>
+  </div>
+  
+  <hr>
+  
+  <div class="side-profile">
+
+    <div class="username">
+      <p>{{ username }}</p>
+      <img src="/images/verified-seal.png" alt="">
+    </div>
+
+    <div class="profile-data">
+
+      <div class="profile-image">
+        <img [src]="getImageUrl()" alt="Imagem de perfil do usuário">
+      </div>
+
+      <div class="profile-metrics">
+        <div>
+          <h5>700</h5>
+          <p>publicações</p>
+        </div>
+
+        <div>
+          <h5>1300</h5>
+          <p>seguidores</p>
+        </div>
+
+        <div>
+          <h5>179</h5>
+          <p>seguindo</p>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="profile-name">{{ name }}</h5>
+
+    <div class="profile-description">
+      <p>
+        {{ description }}
+      </p>
+
+      <a [href]="site" target="_blank">ir para o meu site</a>
+    </div>
+
+    <button [ngClass]="{ 'follow-btn': !followingProfile, 'following-btn': followingProfile }"
+      (click)="handleFollowClick()"
+    >
+      {{followingProfile ? 'Seguindo' : 'Seguir'}}
+    </button>
+  </div>
+</section>

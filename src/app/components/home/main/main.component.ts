@@ -3,6 +3,7 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 import { CommonModule } from '@angular/common';
 import { MainStackComponent } from '../stack/main-stack/main-stack.component';
 import { SupermarketSectorsComponent } from '../supermarket-sectors/supermarket-sectors.component';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 
 @Component({
   selector: 'app-main',
@@ -11,7 +12,8 @@ import { SupermarketSectorsComponent } from '../supermarket-sectors/supermarket-
     ProjectCardComponent,
     CommonModule,
     MainStackComponent,
-    SupermarketSectorsComponent
+    SupermarketSectorsComponent,
+    UserProfileComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

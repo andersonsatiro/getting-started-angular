@@ -7,9 +7,13 @@
   border: solid 1px $white-100;
   border-radius: 1.2rem;
   padding: 1.6rem;
+  overflow: hidden;
 
   img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+    object-fit: cover;
     border-radius: .6rem;
   }
 

@@ -7,11 +7,13 @@
   row-gap: 1rem;
   column-gap: 1rem;
   padding: 0 15%;
+  padding-bottom: 12rem;
 }
 
 .open-card {
   @include FlexCenter(center, 5rem);
   flex-direction: column;
+  padding-bottom: 12rem;
 
   .btn-return-to-default {
     background-color: $red-200;

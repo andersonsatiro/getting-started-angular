@@ -41,5 +41,22 @@ servirá como uma referência prática e visual de como utilizar as principais f
 # Outpus
 -
 
+# Data binding
+- obter uma informação presente na classe do componente no template HTML e vice-versa
+
+    - Interpolação - OK
+    - property binding
+    - event binding - OK
+
+    - Two-way data binding (C -> T | T -> C)
+        - binding bidirecional encarregado de passar informações tanto do componente para o HTML
+          como também seguindo o caminho inverso.
+        - usa-se binding de eventos em conjunto com o property binding, por isso a notação "banana na caixa"
+        - banana na caixa: [()]
+        - [(ngModel)]="exemplo"
+
+    - class binding
+    - style binding
+
 # Services
 - https://fakestoreapi.com/products

@@ -22,12 +22,22 @@
   <app-project-card
     cardName="user-profile"
     imagePath="/images/user-profile.jpg"
-    [conceptsLearned]="['two-way data binding']"
+    [conceptsLearned]="['two-way data binding', 'ngClass']"
     mainText="Perfil do usuário dinâmico, podendo alterar os dados exibidos instantaneamente"
-    creationDate="August 29, 2024"
+    creationDate="September 28, 2024"
     (detailCard)="cardClicked($event)"
   >
   </app-project-card>
+
+  <app-project-card
+  cardName="to-do-list"
+  imagePath="/images/todolist.jpg"
+  [conceptsLearned]="[]"
+  mainText="Lista para adicionar e gerenciar as tarefas a serem feitas, em andamento e concluídas"
+  creationDate="October 1, 2024"
+  (detailCard)="cardClicked($event)"
+>
+</app-project-card>
 </div>
 
 <ng-template #openCard>
@@ -36,6 +46,7 @@
     <app-main-stack *ngIf="contentShown === 'stack'"></app-main-stack>
     <app-supermarket-sectors *ngIf="contentShown === 'supermarket-sectors'"></app-supermarket-sectors>
     <app-user-profile *ngIf="contentShown === 'user-profile'"></app-user-profile>
+    <app-to-do-list *ngIf="contentShown === 'to-do-list'"></app-to-do-list>
 
     <button
       class="btn-return-to-default"

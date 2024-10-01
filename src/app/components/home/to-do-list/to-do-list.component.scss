@@ -1,0 +1,55 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/functions.scss';
+
+#cards {
+    @include FlexCenter(space-between, 3rem);
+    width: 50vw;
+
+    li {
+        @include FlexCenter(space-between, 0rem);
+        list-style: none;
+        padding: 3rem 4.5rem;
+        width: 100%;
+        border-radius: 0.8rem;
+        background-color: $white-200;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $red-100;
+        }
+
+        .text-content {
+            color: $gray-800;
+
+            h3 {
+                font-size: 3.4rem;
+                font-weight: 700;
+                line-height: 3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+
+        .image-content {
+            @include FlexCenter(center, 0rem);
+            padding: 1.4rem;
+            border-radius: 1rem;
+
+            &.to-do {
+                background-color: $blue-100;
+            }
+    
+            &.doing {
+                background-color: $pink-100;
+            }
+    
+            &.done {
+                background-color: $green-50;
+            }
+        }
+    }
+}

@@ -2,18 +2,23 @@
 @import '../../../styles/functions.scss';
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 2rem;
-  column-gap: 1rem;
-  padding: 0 15%;
-  padding-bottom: 12rem;
+  @include FlexCenter(center, 8rem);
+  flex-direction: column;
+  padding-bottom: 8rem;
+
+  .project-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 1rem;
+    width: 70vw;
+  }
 }
 
 .open-card {
   @include FlexCenter(center, 5rem);
   flex-direction: column;
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
 
   .btn-return-to-default {
     background-color: $red-200;

@@ -1,43 +1,48 @@
 <div class="main" *ngIf="contentShown === 'default'; else openCard">
-  <app-project-card
-    cardName="stack"
-    imagePath="/images/my-stack.webp"
-    [conceptsLearned]="['input', 'input required', 'output']"
-    mainText="Todas as tecnologias que já estudei e coloquei em prática"
-    creationDate="August 25, 2024"
-    (detailCard)="cardClicked($event)"
-  >
-  </app-project-card> 
-  
-  <app-project-card
-    cardName="supermarket-sectors"
-    imagePath="/images/supermarket.jpeg"
-    [conceptsLearned]="['data binding', 'interpolação', 'event binding']"
-    mainText="Exibição dos produtos de um supermercado de acordo com o seu setor"
-    creationDate="August 28, 2024"
-    (detailCard)="cardClicked($event)"
-  >
-  </app-project-card>
 
-  <app-project-card
-    cardName="user-profile"
-    imagePath="/images/user-profile.jpg"
-    [conceptsLearned]="['two-way data binding', 'ngClass']"
-    mainText="Perfil do usuário dinâmico, podendo alterar os dados exibidos instantaneamente"
-    creationDate="September 28, 2024"
-    (detailCard)="cardClicked($event)"
-  >
-  </app-project-card>
+  <section class="project-card">
+    <app-project-card
+      cardName="stack"
+      imagePath="/images/my-stack.webp"
+      [conceptsLearned]="['input', 'input required', 'output']"
+      mainText="Todas as tecnologias que já estudei e coloquei em prática"
+      creationDate="August 25, 2024"
+      (detailCard)="cardClicked($event)"
+    >
+    </app-project-card> 
+    
+    <app-project-card
+      cardName="supermarket-sectors"
+      imagePath="/images/supermarket.jpeg"
+      [conceptsLearned]="['data binding', 'interpolação', 'event binding']"
+      mainText="Exibição dos produtos de um supermercado de acordo com o seu setor"
+      creationDate="August 28, 2024"
+      (detailCard)="cardClicked($event)"
+    >
+    </app-project-card>
 
-  <app-project-card
-  cardName="to-do-list"
-  imagePath="/images/todolist.jpg"
-  [conceptsLearned]="[]"
-  mainText="Lista para adicionar e gerenciar as tarefas a serem feitas, em andamento e concluídas"
-  creationDate="October 1, 2024"
-  (detailCard)="cardClicked($event)"
->
-</app-project-card>
+    <app-project-card
+      cardName="user-profile"
+      imagePath="/images/user-profile.jpg"
+      [conceptsLearned]="['two-way data binding', 'ngClass']"
+      mainText="Perfil do usuário dinâmico, podendo alterar os dados exibidos instantaneamente"
+      creationDate="September 28, 2024"
+      (detailCard)="cardClicked($event)"
+    >
+    </app-project-card>
+
+    <app-project-card
+      cardName="to-do-list"
+      imagePath="/images/todolist.jpg"
+      [conceptsLearned]="[]"
+      mainText="Lista para adicionar e gerenciar as tarefas a serem feitas, em andamento e concluídas"
+      creationDate="October 1, 2024"
+      (detailCard)="cardClicked($event)"
+    >
+    </app-project-card>
+  </section>
+
+  <app-ads></app-ads>
 </div>
 
 <ng-template #openCard>

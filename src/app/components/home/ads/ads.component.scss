@@ -1,0 +1,31 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/functions.scss';
+
+section {
+    @include FlexCenter(center, 2rem);
+    align-items: start;
+    flex-direction: column;
+    width: 70vw;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        background-image: linear-gradient(to left, $red-200, $yellow-200);
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+
+    ul {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        width: 100%;
+
+        li {
+            list-style: none;
+            width: 100%;
+        }
+    }
+}

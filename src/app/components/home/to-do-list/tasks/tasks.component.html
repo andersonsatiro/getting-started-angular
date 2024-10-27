@@ -1,0 +1,38 @@
+<section>
+    <table>
+        <tr>
+            <th>usuário</th>
+            <th>status</th>
+            <th>e-mail</th>
+            <th>data</th>
+            <th>website</th>
+            <th>remover</th>
+        </tr>
+
+        <tr *ngFor="let task of tasks">
+            <td>
+                {{task.user}}
+            </td>
+
+            <td>
+                {{task.status}}
+            </td>
+
+            <td>
+                {{task.email}}
+            </td>
+
+            <td>
+                {{task.date}}
+            </td>
+
+            <td>
+                {{task.website}}
+            </td>
+
+            <td>
+                <button>delete</button>
+            </td>
+        </tr>
+    </table>
+</section>

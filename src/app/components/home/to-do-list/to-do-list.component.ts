@@ -15,5 +15,6 @@ export class ToDoListComponent {
 
   constructor(toDoService: ToDoListService) {
     this.tasks = toDoService.getTasks()
+    console.log(this.tasks)
   }
 }

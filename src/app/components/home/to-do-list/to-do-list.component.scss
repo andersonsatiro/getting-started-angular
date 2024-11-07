@@ -1,50 +1,56 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/functions.scss';
 
-#cards {
-    @include FlexCenter(space-between, 3rem);
-    width: 50vw;
+#todo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 
-    li {
-        @include FlexCenter(space-between, 0rem);
-        list-style: none;
-        padding: 3rem 4.5rem;
-        width: 100%;
-        border-radius: 0.8rem;
-        background-color: $white-200;
-        transition: .3s;
+    #cards {
+        @include FlexCenter(space-between, 3rem);
+        width: 50vw;
 
-        &:hover {
-            cursor: pointer;
-            background-color: $red-100;
-        }
+        li {
+            @include FlexCenter(space-between, 0rem);
+            list-style: none;
+            padding: 3rem 4.5rem;
+            width: 100%;
+            border-radius: 0.8rem;
+            background-color: $white-200;
+            transition: .3s;
 
-        .text-content {
-            color: $gray-800;
-
-            h3 {
-                font-size: 3.4rem;
-                font-weight: 700;
-                line-height: 3rem;
+            &:hover {
+                cursor: pointer;
+                background-color: $red-100;
             }
 
-            p {
-                font-size: 1.6rem;
-                font-weight: 600;
-            }
-        }
+            .text-content {
+                color: $gray-800;
 
-        .image-content {
-            @include FlexCenter(center, 0rem);
-            padding: 1.4rem;
-            border-radius: 1rem;
+                h3 {
+                    font-size: 3.4rem;
+                    font-weight: 700;
+                    line-height: 3rem;
+                }
 
-            &.to-do {
-                background-color: $blue-100;
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                }
             }
-    
-            &.done {
-                background-color: $green-50;
+
+            .image-content {
+                @include FlexCenter(center, 0rem);
+                padding: 1.4rem;
+                border-radius: 1rem;
+
+                &.to-do {
+                    background-color: $blue-100;
+                }
+        
+                &.done {
+                    background-color: $green-50;
+                }
             }
         }
     }

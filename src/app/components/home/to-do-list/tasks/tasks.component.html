@@ -2,6 +2,7 @@
     <table>
         <tr>
             <th>usuário</th>
+            <th>titulo</th>
             <th>status</th>
             <th>e-mail</th>
             <th>data</th>
@@ -11,23 +12,27 @@
 
         <tr *ngFor="let task of tasks">
             <td>
-                {{task.user}}
+                {{ task.user }}
             </td>
 
             <td>
-                {{task.status}}
+                {{ task.title }}
             </td>
 
             <td>
-                {{task.email}}
+                {{ task.status }}
             </td>
 
             <td>
-                {{task.date}}
+                {{ task.email }}
             </td>
 
             <td>
-                {{task.website}}
+                {{ task.date }}
+            </td>
+
+            <td>
+                {{ task.website }}
             </td>
 
             <td>
